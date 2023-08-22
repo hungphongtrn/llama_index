@@ -48,7 +48,9 @@ For instance, you can do
 ```python
 from llama_index.node_parser import SimpleNodeParser
 
-parser = SimpleNodeParser()
+parser = SimpleNodeParser.from_defaults()
+#or
+parser = SimpleNodeParser(text_splitter=text_splitter)
 
 nodes = parser.get_nodes_from_documents(documents)
 ```
